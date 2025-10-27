@@ -31,6 +31,7 @@ public class bankAccount {
 /* Métodos */
     public void withdraw(double withdraw){
         balance -= withdraw;
+        balance -= 5;
     }
 
     public void deposit(double deposit){
