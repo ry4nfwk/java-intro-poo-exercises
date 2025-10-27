@@ -6,11 +6,18 @@ public class bankAccount {
     private double balance;
 
 /* Construtores */
-    public bankAccount(int accountId, String accountHolder, double balance) {
+    public bankAccount(int accountId, String accountHolder) {
         this.accountId = accountId;
         this.accountHolder = accountHolder;
-        this.balance = balance;
     }
+
+    public bankAccount(int accountId, String accountHolder, double initialDeposit) {
+        this.accountId = accountId;
+        this.accountHolder = accountHolder;
+        deposit(initialDeposit);
+    }
+
+
 
 /* Getters e Setters */
     public int getAccountId(){
@@ -29,13 +36,12 @@ public class bankAccount {
         return balance;
     }
 /* Métodos */
-    public void withdraw(double withdraw){
-        balance -= withdraw;
-        balance -= 5;
+    public void withdraw(double amount){
+        balance -= amount + 5;
     }
 
-    public void deposit(double deposit){
-        balance += deposit;
+    public void deposit(double amount){
+        balance += amount;
     }
     public String toString(){
         return "Account " + getAccountId() + "," + " Holder: " + getAccountHolder() + ", " + "Balance: $ " + String.format("%.2f", getBalance());
