@@ -22,11 +22,9 @@ public class fVectRooms {
             String email = sc.nextLine();
             System.out.print("Room: ");
             int room = sc.nextInt();
-            vect[room] = new VectRooms();
-            vect[room].setPeopleName(peopleName);
-            vect[room].setEmail(email);
-            vect[room].setRoom(room);
+            vect[room] = new VectRooms(peopleName, email);
         }
+
         System.out.println("\nBusy rooms:");
             for (int i = 0; i < 9; i++){
                 if(vect[i] != null){

@@ -5,14 +5,9 @@ public class VectRooms {
     private String email;
     private int room;
 
-    public VectRooms(String peopleName, String email, int room) {
+    public VectRooms(String peopleName, String email) {
         this.peopleName = peopleName;
         this.email = email;
-        this.room = room;
-    }
-
-    public VectRooms(){
-
     }
 
     public String getPeopleName(){
@@ -21,17 +16,11 @@ public class VectRooms {
     public String getEmail(){
         return email;
     }
-    public int getRoom(){
-        return room;
-    }
     public void setPeopleName(String peopleName){
         this.peopleName = peopleName;
     }
     public void setEmail(String email){
         this.email = email;
-    }
-    public void setRoom(int room){
-        this.room = room;
     }
 
     public String toString(){
