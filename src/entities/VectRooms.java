@@ -3,7 +3,6 @@ package entities;
 public class VectRooms {
     private String peopleName;
     private String email;
-    private int room;
 
     public VectRooms(String peopleName, String email) {
         this.peopleName = peopleName;
