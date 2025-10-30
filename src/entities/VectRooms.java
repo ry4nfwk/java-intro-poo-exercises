@@ -35,6 +35,6 @@ public class VectRooms {
     }
 
     public String toString(){
-        return "Name: " + peopleName+"\n" + "Email: " + email+"\n" + "Room: " +"\n";
+        return peopleName + ", " + email;
     }
 }

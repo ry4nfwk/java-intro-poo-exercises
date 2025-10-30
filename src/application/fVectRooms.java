@@ -14,18 +14,24 @@ public class fVectRooms {
 
         for(int i = 0; i < N; i++){
             System.out.println();
-            vect[i] = new VectRooms();
             System.out.println("Rent #"+ (i+1)+":");
             System.out.print("Name: ");
             sc.nextLine();
             String peopleName = sc.nextLine();
-            vect[i].setPeopleName(peopleName);
             System.out.print("Email: ");
             String email = sc.nextLine();
-            vect[i].setEmail(email);
             System.out.print("Room: ");
             int room = sc.nextInt();
-            vect[i].setRoom(room);
+            vect[room] = new VectRooms();
+            vect[room].setPeopleName(peopleName);
+            vect[room].setEmail(email);
+            vect[room].setRoom(room);
         }
+        System.out.println("\nBusy rooms:");
+            for (int i = 0; i < 9; i++){
+                if(vect[i] != null){
+                    System.out.println(i + ": " + vect[i]);
+                }
+            }
     }
 }
